@@ -1,3 +1,18 @@
+
+|                |Modül Adı                          |Modül Süresi                         |
+|----------------|-------------------------------|-----------------------------|
+|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
+|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+
+
+
+
+-----
+
+
+
+
 -PROJE MODÜLÜ
 --
 -1 - PROJENİN AMACI : İnsanların kendi düşüncelerini, verilerini paylaşabileceği bir platform oluşturmak.
