@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BlogProject.Models
 {
-    [Table("Articles")]
     public class Articles
     {
         public int Id { get; set; }
@@ -19,10 +18,12 @@ namespace BlogProject.Models
         public string ArticleContent { get; set; }
         public DateTime ArticleAddTime { get; set; }
         public int ArticleViews { get; set; }
-        public string ArticleComment { get; set; }
 
         public int UserId { get; set; }
         public virtual Users User { get; set; }
+
+        public int CommentsId { get; set; }
+        public ICollection<Comments> ArticleComments { get; set; }
 
     }
     public class ArticlesEntityConfiguration : IEntityTypeConfiguration<Articles>

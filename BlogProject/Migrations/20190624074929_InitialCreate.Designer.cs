@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogProject.Migrations
 {
     [DbContext(typeof(EfCoreContext))]
-    [Migration("20190622132024_InitialCreate")]
+    [Migration("20190624074929_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,8 +29,6 @@ namespace BlogProject.Migrations
 
                     b.Property<DateTime>("ArticleAddTime");
 
-                    b.Property<string>("ArticleComment");
-
                     b.Property<string>("ArticleContent");
 
                     b.Property<string>("ArticleSubject");
@@ -38,6 +36,8 @@ namespace BlogProject.Migrations
                     b.Property<string>("ArticleTitle");
 
                     b.Property<int>("ArticleViews");
+
+                    b.Property<int>("CommentsId");
 
                     b.Property<int>("UserId");
 
@@ -48,21 +48,25 @@ namespace BlogProject.Migrations
                     b.ToTable("Articles");
                 });
 
-            modelBuilder.Entity("BlogProject.Models.Logs", b =>
+            modelBuilder.Entity("BlogProject.Models.Comments", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("EnterTime");
+                    b.Property<int>("ArticlesId");
 
-                    b.Property<DateTime>("ExitTime");
+                    b.Property<string>("Text");
 
-                    b.Property<int>("UserId");
+                    b.Property<int>("UsersId");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Logs");
+                    b.HasIndex("ArticlesId");
+
+                    b.HasIndex("UsersId");
+
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("BlogProject.Models.Users", b =>
@@ -73,9 +77,9 @@ namespace BlogProject.Migrations
 
                     b.Property<int>("ArticlesId");
 
-                    b.Property<int>("LogsId");
+                    b.Property<int>("CommentsId");
 
-                    b.Property<string>("UserBirth");
+                    b.Property<DateTime>("UserBirth");
 
                     b.Property<string>("UserGender");
 
@@ -89,9 +93,6 @@ namespace BlogProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LogsId")
-                        .IsUnique();
-
                     b.ToTable("Users");
                 });
 
@@ -103,12 +104,17 @@ namespace BlogProject.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("BlogProject.Models.Users", b =>
+            modelBuilder.Entity("BlogProject.Models.Comments", b =>
                 {
-                    b.HasOne("BlogProject.Models.Logs", "Logs")
-                        .WithOne("User")
-                        .HasForeignKey("BlogProject.Models.Users", "LogsId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                    b.HasOne("BlogProject.Models.Articles", "Articles")
+                        .WithMany("ArticleComments")
+                        .HasForeignKey("ArticlesId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("BlogProject.Models.Users", "Users")
+                        .WithMany("Comments")
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }
