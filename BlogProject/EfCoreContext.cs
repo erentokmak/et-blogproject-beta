@@ -16,13 +16,13 @@ namespace BlogProject
 
         public DbSet<Articles> Articles { get; set; }
         public DbSet<Users> Users { get; set; }
-        public DbSet<Logs> Logs { get; set; }
+        public DbSet<Comments> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ArticlesEntityConfiguration());
-            modelBuilder.ApplyConfiguration(new UsersEntityConfiguration());
-            modelBuilder.ApplyConfiguration(new LogsEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentsEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentsUsersEntityConfiguration());
 
         }
 
