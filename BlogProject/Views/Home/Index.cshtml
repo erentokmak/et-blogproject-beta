@@ -295,6 +295,94 @@
                   opacity:1;
                 }
             }
+            .anim1 
+            {
+                width:20px;
+                height:20px;
+                background:white;
+                border-radius:100px;
+                position:absolute;
+                left:46%;
+                top:55%;
+                animation: anim1 2s infinite;
+                opacity:0;
+            }
+            @@keyframes anim1 
+            {
+                0%
+                {
+                    opacity:0;
+                    transform:scale(0);
+                }
+                50%
+                {
+                    opacity:1;
+                    transform:scale(1);
+                }
+                100%
+                {
+                    opacity:0;
+                   transform:scale(0);
+                }
+               }
+              .anim2
+               {
+                width:20px;
+                height:20px;
+                background:white;
+                border-radius:100px;
+                position:absolute;
+                left:49%;
+                top:55%;
+                animation: anim2 2.5s infinite;
+               }
+              @@keyframes anim2
+               {
+                0%
+                {
+                    opacity:0;
+                    transform:scale(0);
+                }
+                50%
+                {
+                    opacity:1;
+                    transform:scale(1);
+                }
+                100%
+                {
+                    opacity:0;
+                   transform:scale(0);
+                }
+               }
+                .anim3
+                {
+                width:20px;
+                height:20px;
+                background:white;
+                border-radius:100px;
+                position:absolute;
+                left:52%;
+                top:55%;
+                animation: anim3 3s infinite;
+                }
+                 @@keyframes anim3
+                {
+                0%
+                {
+                    opacity:0;
+                    transform:scale(0);
+                }
+                50%
+                {
+                    opacity:1;
+                    transform:scale(1);
+                }
+                100%
+                {
+                    opacity:0;
+                   transform:scale(0);
+                }
+            }
         </style>
     </head>
     <body>
@@ -315,11 +403,16 @@
                     <form class="form">
                         <input type="text" placeholder="Kullanıcı Adı">
                         <input type="password" placeholder="Sifre">
-                        <div style="width:600px;height:1px;background:white;"></div>
-                        <br />
-                        <button type="button" id="login-button">Giris</button>
+                        <div style="height:5px"></div>
+                        <button type="button" id="login-button">Giriş</button>
                     </form>
                 </div>
+            </div>
+
+            <div>
+                <div  id="a1"></div>
+                <div  id="a2"></div>
+                <div  id="a3"></div>
             </div>
 
             <ul class="bg-bubbles">
@@ -342,6 +435,9 @@
 
                 $('form').fadeOut(500);
                 $('.wrapper').addClass('form-success');
+                $('#a1').addClass('anim1');
+                $('#a2').addClass('anim2');
+                $('#a3').addClass('anim3');
             });
         </script>
     </body>
