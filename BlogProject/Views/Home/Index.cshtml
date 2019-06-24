@@ -90,7 +90,7 @@
                 .container h1 {
                     font-size: 40px;
                     transition-duration: 1s;
-                    transition-timing-function: ease-in-put;
+                    transition-timing-function: ease-in-out;
                     font-weight: 200;
                 }
 
@@ -104,7 +104,7 @@
                 form input {
                     -webkit-appearance: none;
                     -moz-appearance: none;
-                    appearance: none;
+                    apperance: none;
                     outline: 0;
                     border: 1px solid rgba(255, 255, 255, 0.4);
                     background-color: rgba(255, 255, 255, 0.2);
@@ -279,6 +279,22 @@
                     transform: translateY(-700px) rotate(600deg);
                 }
             }
+            #firstenter
+            {
+                opacity:1;
+                animation:firstent 3s;
+            }
+            @@keyframes firstent
+            {
+                0%
+                {
+                  opacity:0;
+                }
+                100%
+                {
+                  opacity:1;
+                }
+            }
         </style>
     </head>
     <body>
@@ -292,14 +308,15 @@
             <br />
             <br />
             <br />
-            <div class="container">
+            <div class="container" id="firstenter">
                 <div>
                     <h1>Blog Project</h1>
                     <br />
                     <form class="form">
                         <input type="text" placeholder="Kullanıcı Adı">
                         <input type="password" placeholder="Sifre">
-
+                        <div style="width:600px;height:1px;background:white;"></div>
+                        <br />
                         <button type="button" id="login-button">Giris</button>
                     </form>
                 </div>
