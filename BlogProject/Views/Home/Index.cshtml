@@ -3,6 +3,10 @@
 }
     <html>
     <head>
+        <script src="~/lib/jquery/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
         <style>
             @@font-face {
                 font-family: 'Source Sans Pro';
@@ -31,7 +35,6 @@
                 font-weight: 300;
                 background: #50a3a2;
                 background: linear-gradient(to bottom right, #53e3a6 0%, #50a3a2 100%);
-
             }
 
                 body ::-webkit-input-placeholder {
@@ -75,8 +78,8 @@
             }
 
                 .wrapper.form-success .container h1 {
-                    -webkit-transform: translateY(102px);
-                    transform: translateY(102px);
+                    -webkit-transform: translateY(90px);
+                    transform: translateY(90px);
                 }
 
             .container {
@@ -273,114 +276,110 @@
                     -webkit-transform: translateY(0);
                     transform: translateY(0);
                 }
-                
+
                 100% {
                     -webkit-transform: translateY(-700px) rotate(600deg);
                     transform: translateY(-700px) rotate(600deg);
                 }
             }
-            #firstenter
-            {
-                opacity:1;
-                animation:firstent 3s;
+
+            #firstenter {
+                opacity: 1;
+                animation: firstent 3s;
             }
-            @@keyframes firstent
-            {
-                0%
-                {
-                  opacity:0;
+
+            @@keyframes firstent {
+                0% {
+                    opacity: 0;
                 }
-                100%
-                {
-                  opacity:1;
+
+                100% {
+                    opacity: 1;
                 }
             }
-            .anim1 
-            {
-                width:20px;
-                height:20px;
-                background:white;
-                border-radius:100px;
-                position:absolute;
-                left:46%;
-                top:55%;
+
+            .anim1 {
+                width: 20px;
+                height: 20px;
+                background: white;
+                border-radius: 100px;
+                position: absolute;
+                left: 46%;
+                top: 55%;
                 animation: anim1 2s infinite;
-                opacity:0;
+                opacity: 0;
             }
-            @@keyframes anim1 
-            {
-                0%
-                {
-                    opacity:0;
-                    transform:scale(0);
+
+            @@keyframes anim1 {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
                 }
-                50%
-                {
-                    opacity:1;
-                    transform:scale(1);
+
+                50% {
+                    opacity: 1;
+                    transform: scale(1);
                 }
-                100%
-                {
-                    opacity:0;
-                   transform:scale(0);
+
+                100% {
+                    opacity: 0;
+                    transform: scale(0);
                 }
-               }
-              .anim2
-               {
-                width:20px;
-                height:20px;
-                background:white;
-                border-radius:100px;
-                position:absolute;
-                left:49%;
-                top:55%;
+            }
+
+            .anim2 {
+                width: 20px;
+                height: 20px;
+                background: white;
+                border-radius: 100px;
+                position: absolute;
+                left: 49%;
+                top: 55%;
                 animation: anim2 2.5s infinite;
-               }
-              @@keyframes anim2
-               {
-                0%
-                {
-                    opacity:0;
-                    transform:scale(0);
+            }
+
+            @@keyframes anim2 {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
                 }
-                50%
-                {
-                    opacity:1;
-                    transform:scale(1);
+
+                50% {
+                    opacity: 1;
+                    transform: scale(1);
                 }
-                100%
-                {
-                    opacity:0;
-                   transform:scale(0);
+
+                100% {
+                    opacity: 0;
+                    transform: scale(0);
                 }
-               }
-                .anim3
-                {
-                width:20px;
-                height:20px;
-                background:white;
-                border-radius:100px;
-                position:absolute;
-                left:52%;
-                top:55%;
+            }
+
+            .anim3 {
+                width: 20px;
+                height: 20px;
+                background: white;
+                border-radius: 100px;
+                position: absolute;
+                left: 52%;
+                top: 55%;
                 animation: anim3 3s infinite;
+            }
+
+            @@keyframes anim3 {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
                 }
-                 @@keyframes anim3
-                {
-                0%
-                {
-                    opacity:0;
-                    transform:scale(0);
+
+                50% {
+                    opacity: 1;
+                    transform: scale(1);
                 }
-                50%
-                {
-                    opacity:1;
-                    transform:scale(1);
-                }
-                100%
-                {
-                    opacity:0;
-                   transform:scale(0);
+
+                100% {
+                    opacity: 0;
+                    transform: scale(0);
                 }
             }
         </style>
@@ -399,12 +398,11 @@
             <div class="container" id="firstenter">
                 <div>
                     <h1>Blog Project</h1>
-                    <br />
                     <form class="form">
                         <input type="text" placeholder="Kullanıcı Adı">
                         <input type="password" placeholder="Sifre">
-                        <div style="height:5px"></div>
-                        <button type="button" id="login-button">Giriş</button>
+                        <div style="height:10px"></div>
+                        <button type="button" id="login-button">Giris</button>
                     </form>
                 </div>
             </div>

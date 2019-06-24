@@ -13,8 +13,10 @@ namespace BlogProject.Models
     {
 
         public int Id { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
         public string UserName { get; set; }
-        public string UserSurname { get; set; }
+        public string UserPassword { get; set; }
         public string UserMail { get; set; }
         public DateTime UserBirth { get; set; }
         public string UserGender { get; set; }
@@ -25,6 +27,12 @@ namespace BlogProject.Models
 
         public int CommentsId { get; set; }
         public ICollection<Comments> Comments { get; set; }
+    }
+
+    public enum Gender
+    {
+        Erkek,
+        Kadın
     }
    
 }
