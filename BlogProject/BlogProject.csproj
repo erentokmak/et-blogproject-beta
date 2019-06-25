@@ -6,9 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Content\**" />
     <Compile Remove="Migrations\**" />
+    <Content Remove="Content\**" />
     <Content Remove="Migrations\**" />
+    <EmbeddedResource Remove="Content\**" />
     <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Content\**" />
     <None Remove="Migrations\**" />
   </ItemGroup>
 
@@ -26,11 +30,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Content\LoginJs\" />
   </ItemGroup>
 
 </Project>
