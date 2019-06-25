@@ -33,10 +33,5 @@ namespace BlogProject.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Register(Users user)
-        {
-            return View();
-        }
     }
 }
