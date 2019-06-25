@@ -79,8 +79,8 @@
         }
 
             .wrapper.form-success .container h1 {
-                -webkit-transform: translateY(165px);
-                transform: translateY(165px);
+                -webkit-transform: translateY(175px);
+                transform: translateY(175px);
             }
 
         .container {
@@ -316,7 +316,7 @@
 
         #firstenter {
             opacity: 1;
-            animation: firstent 3s;
+            animation: firstent 5s;
         }
 
         @@keyframes firstent {
@@ -413,6 +413,22 @@
                 transform: scale(0);
             }
         }
+         #loginbtn
+            {
+                color:white;
+                text-decoration:none;
+                font-size:13px;
+                border:1px solid;
+                border-radius:10px;
+                padding: 4px 10px;
+                transition: ease-in 0.5s;
+            }
+            #loginbtn:hover
+            {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-color:white;
+                color:white;
+            }
     </style>
 </head>
 <body>
@@ -436,7 +452,7 @@
                             @Html.DropDownList("Cinsiyet",
                             new SelectList(Enum.GetValues(typeof(Gender))),
                             "Cinsiyet Seçiniz",
-                            new { @class = " inputclass form-control"})
+                            new { @class = " inputclass form-control" })
                         </div>
                         <div class="col-md">
                             <input type="text" placeholder="Soyad">
@@ -446,8 +462,11 @@
                         </div>
                     </div>
                     <div style="height:5px"></div>
-                    <br/>
+                    <br />
                     <button type="button" id="login-button">Kayıt Ol</button>
+                    <br />
+                    <br />
+                    <a href="~/Home/Register" id="loginbtn">Hesabın var mı ? </a>
                 </form>
             </div>
         </div>
@@ -482,6 +501,24 @@
                 $('#a2').addClass('anim2');
                 $('#a3').addClass('anim3');
             });
+          $("#loginbtn").click(function (event) {
+                event.preventDefault();
+
+                $('form').fadeOut(500);
+                $('.wrapper').addClass('form-success');
+                $('#a1').addClass('anim1');
+                $('#a2').addClass('anim2');
+                $('#a3').addClass('anim3');
+                
+              });
+
+            $(document).ready(function () {
+            $("#loginbtn").click(function () {
+                setTimeout(function () {
+                window.location.href = "Index";
+                }, 5000);
+            });
+        });
     </script>
 </body>
 </html>

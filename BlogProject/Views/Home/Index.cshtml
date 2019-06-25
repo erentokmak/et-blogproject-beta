@@ -78,8 +78,8 @@
             }
 
                 .wrapper.form-success .container h1 {
-                    -webkit-transform: translateY(90px);
-                    transform: translateY(90px);
+                    -webkit-transform: translateY(85px);
+                    transform: translateY(85px);
                 }
 
             .container {
@@ -285,7 +285,7 @@
 
             #firstenter {
                 opacity: 1;
-                animation: firstent 3s;
+                animation: firstent 5s;
             }
 
             @@keyframes firstent {
@@ -382,6 +382,22 @@
                     transform: scale(0);
                 }
             }
+            #registerbutton
+            {
+                color:white;
+                text-decoration:none;
+                font-size:13px;
+                border:1px solid;
+                border-radius:10px;
+                padding: 4px 10px;
+                transition: ease-in 0.5s;
+            }
+            #registerbutton:hover
+            {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-color:white;
+                color:white;
+            }
         </style>
     </head>
     <body>
@@ -403,6 +419,9 @@
                         <input type="password" placeholder="Sifre">
                         <div style="height:10px"></div>
                         <button type="button" id="login-button">Giris</button>
+                        <br />
+                        <br />
+                        <a href="~/Home/Register" id="registerbutton" >Hesabın yok mu ? </a>
                     </form>
                 </div>
             </div>
@@ -437,6 +456,26 @@
                 $('#a2').addClass('anim2');
                 $('#a3').addClass('anim3');
             });
+
+              $("#registerbutton").click(function (event) {
+                event.preventDefault();
+
+                $('form').fadeOut(500);
+                $('.wrapper').addClass('form-success');
+                $('#a1').addClass('anim1');
+                $('#a2').addClass('anim2');
+                $('#a3').addClass('anim3');
+                
+              });
+
+            $(document).ready(function () {
+            $("#registerbutton").click(function () {
+                setTimeout(function () {
+                window.location.href = "Home/Register";
+                }, 5000);
+            });
+        });
+
         </script>
     </body>
     </html>
