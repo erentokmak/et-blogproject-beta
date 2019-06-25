@@ -420,6 +420,22 @@
                 transform: scale(0);
             }
         }
+         #loginbtn
+            {
+                color:white;
+                text-decoration:none;
+                font-size:13px;
+                border:1px solid;
+                border-radius:10px;
+                padding: 4px 10px;
+                transition: ease-in 0.5s;
+            }
+           #loginbtn:hover
+            {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-color:white;
+                color:white;
+            }
     </style>
 </head>
 <body>
@@ -444,7 +460,7 @@
                                 @Html.DropDownList("Cinsiyet",
                                 new SelectList(Enum.GetValues(typeof(Gender))),
                                 "Cinsiyet",
-                                new { @class = " inputclass form-control dropdownmid ", asp_for="UserGender"})
+                                new { @class = " inputclass form-control dropdownmid ", asp_for = "UserGender" })
                             </p>
                         </div>
                         <div class="col-md">
@@ -467,12 +483,16 @@
                                     <input type="hidden" id="dtp_input2" value="" /><br />
                                 </div>
                             </p>
+
                             <br />
-                            <button type="submit" id="login-button">Kayıt Ol</button>
                         </div>
                         <div style="height:10px"></div>
                         <br />
                     </div>
+                    <button type="submit" id="login-button" style="left:40%;">Kayıt Ol</button>
+                    <br />
+                    <br />
+                    <a href="~/Index" id="loginbtn">Hesabın var mı ? </a>
                 </form>
             </div>
         </div>
@@ -2480,6 +2500,25 @@
             startView: 2,
             minView: 2,
             forceParse: 0
+        });
+        
+              $("#loginbtn").click(function (event) {
+                event.preventDefault();
+
+                $('form').fadeOut(500);
+                $('.wrapper').addClass('form-success');
+                $('#a1').addClass('anim1');
+                $('#a2').addClass('anim2');
+                $('#a3').addClass('anim3');
+                
+              });
+
+            $(document).ready(function () {
+            $("#loginbtn").click(function () {
+                setTimeout(function () {
+                window.location.href = "Index";
+                }, 5000);
+            });
         });
     </script>
 </body>
