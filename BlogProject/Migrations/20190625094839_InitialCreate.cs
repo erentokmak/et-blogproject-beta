@@ -14,8 +14,10 @@ namespace BlogProject.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    Surname = table.Column<string>(nullable: true),
                     UserName = table.Column<string>(nullable: true),
-                    UserSurname = table.Column<string>(nullable: true),
+                    UserPassword = table.Column<string>(nullable: true),
                     UserMail = table.Column<string>(nullable: true),
                     UserBirth = table.Column<DateTime>(nullable: false),
                     UserGender = table.Column<string>(nullable: true),
