@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogProject.Migrations
 {
     [DbContext(typeof(EfCoreContext))]
-    [Migration("20190624074929_InitialCreate")]
+    [Migration("20190625094839_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,6 +79,10 @@ namespace BlogProject.Migrations
 
                     b.Property<int>("CommentsId");
 
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Surname");
+
                     b.Property<DateTime>("UserBirth");
 
                     b.Property<string>("UserGender");
@@ -87,9 +91,9 @@ namespace BlogProject.Migrations
 
                     b.Property<string>("UserName");
 
-                    b.Property<string>("UserPhone");
+                    b.Property<string>("UserPassword");
 
-                    b.Property<string>("UserSurname");
+                    b.Property<string>("UserPhone");
 
                     b.HasKey("Id");
 

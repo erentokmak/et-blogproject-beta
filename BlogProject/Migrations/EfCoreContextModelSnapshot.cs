@@ -77,6 +77,10 @@ namespace BlogProject.Migrations
 
                     b.Property<int>("CommentsId");
 
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Surname");
+
                     b.Property<DateTime>("UserBirth");
 
                     b.Property<string>("UserGender");
@@ -85,9 +89,9 @@ namespace BlogProject.Migrations
 
                     b.Property<string>("UserName");
 
-                    b.Property<string>("UserPhone");
+                    b.Property<string>("UserPassword");
 
-                    b.Property<string>("UserSurname");
+                    b.Property<string>("UserPhone");
 
                     b.HasKey("Id");
 
