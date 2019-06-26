@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogProject.ViewModels.Home
 {
-    public class HomePageViewModel
+    public class ViewModels
     {
         public List<Users> DbUsers { get; set; }
         public List<Category> DbArticles { get; set; }
