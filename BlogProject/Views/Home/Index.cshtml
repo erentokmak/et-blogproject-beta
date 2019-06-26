@@ -561,7 +561,14 @@
                 $('#a2').addClass('anim2');
                 $('#a3').addClass('anim3');
             });
-
+            
+            $(document).ready(function () {
+            $("#login-button").click(function () {
+                setTimeout(function () {
+                window.location.href = "Home/MainPage";
+                }, 3000);
+            });
+        });
               $("#registerbutton").click(function (event) {
                 event.preventDefault();
 

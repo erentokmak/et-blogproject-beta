@@ -11,7 +11,6 @@ namespace BlogProject.Models
 {
     public class Users
     {
-
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -22,9 +21,9 @@ namespace BlogProject.Models
         public string UserGender { get; set; }
         public string UserPhone { get; set; }
 
-        public ICollection<Articles>Articles { get; set; }
+        public ICollection<Article> Articles { get; set; }
 
-        public ICollection<Comments> Comments { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 
     public enum Gender

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BlogProject.Models
 {
-    public class Articles
+    public class Article
     {
         public int Id { get; set; }
 
@@ -22,20 +22,29 @@ namespace BlogProject.Models
         public int UserId { get; set; }
         public virtual Users User { get; set; }
 
-        public int CommentsId { get; set; }
-        public ICollection<Comments> ArticleComments { get; set; }
+        public int CommentId { get; set; }
+        public ICollection<Comment> Comments { get; set; }
+
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
 
     }
-    public class ArticlesEntityConfiguration : IEntityTypeConfiguration<Articles>
-        //Article tablosunda user foreign'i oluşturmaya çalışıyorum. // çalışıyor
+    public class ArticlesEntityConfiguration : IEntityTypeConfiguration<Article>
+    //Article tablosunda user foreign'i oluşturmaya çalışıyorum. // çalışıyor
     {
-        public void Configure(EntityTypeBuilder<Articles> builder)
+        public void Configure(EntityTypeBuilder<Article> builder)
         {
             builder.HasOne(navigationExpression: m => m.User)
                 .WithMany(navigationExpression: g => g.Articles)
                 .HasForeignKey(s => s.UserId)
                 .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired();              
+                .IsRequired();
+
+            builder.HasOne(m => m.Category)
+               .WithMany(g => g.Articles)
+               .HasForeignKey(s => s.CategoryId)
+               .OnDelete(DeleteBehavior.Restrict)
+               .IsRequired();
         }
     }
 }
