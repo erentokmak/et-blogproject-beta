@@ -103,14 +103,12 @@
                         <li class="has-children">
                             <a href="#0" title="">Blog</a>
                             <ul class="sub-menu">
-                                <li><a href="single-video.html">Video Gönderileri</li>
-                                <li><a href="single-gallery.html">Galeri Gönderileri</a></li>
-                                <li><a href="single-standard.html">Standart Gönderiler</a></li>
+                                <li>@Html.ActionLink("Blogunuz","Single","Blog")</li>
+
                             </ul>
                         </li>
-                        <li><a href="style-guide.html" title="">Stil</a></li>
-                        <li><a href="about.html" title="">Hakkımızda</a></li>
-                        <li><a href="contact.html" title="">İletisim</a></li>
+                        <li>@Html.ActionLink("Hakkımızda","About","Home")</li>
+                        <li><a href="contact.html" title="">@Html.ActionLink("İletişim","Contact","Home")</a></li>
                     </ul> <!-- end header__nav -->
 
                     <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
