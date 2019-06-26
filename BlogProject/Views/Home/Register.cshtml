@@ -457,10 +457,10 @@
                                 <input asp-for="UserMail" type="text" placeholder="E-Mail">
                             </p>
                             <p>
-                                @Html.DropDownList("Cinsiyet",
+                                @Html.DropDownListFor(x => x.UserGender,
                                 new SelectList(Enum.GetValues(typeof(Gender))),
                                 "Cinsiyet",
-                                new { @class = " inputclass form-control dropdownmid ", asp_for="UserGender"})
+                                new { @class = " inputclass form-control dropdownmid " })
                             </p>
                         </div>
                         <div class="col-md">
@@ -484,11 +484,13 @@
                                 </div>
                             </p>
                             <br />
-                            <button type="submit" id="login-button">Kayıt Ol</button>
                         </div>
-                        <div style="height:10px"></div>
-                        <br />
+                        <div style="height:1px"></div>
                     </div>
+                    <button type="submit" id="login-button" style="left:40%">Kayıt Ol</button>
+                    <br />
+                    <br />
+                    <a href="~/Home/Index" id="loginbtn">Hesabın var mı ? </a>
                 </form>
             </div>
         </div>
@@ -2496,6 +2498,25 @@
             startView: 2,
             minView: 2,
             forceParse: 0
+        });
+        
+              $("#loginbtn").click(function (event) {
+                event.preventDefault();
+
+                $('form').fadeOut(500);
+                $('.wrapper').addClass('form-success');
+                $('#a1').addClass('anim1');
+                $('#a2').addClass('anim2');
+                $('#a3').addClass('anim3');
+                
+              });
+
+            $(document).ready(function () {
+            $("#loginbtn").click(function () {
+                setTimeout(function () {
+                window.location.href = "Index";
+                }, 3000);
+            });
         });
     </script>
 </body>

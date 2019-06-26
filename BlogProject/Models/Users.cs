@@ -22,10 +22,8 @@ namespace BlogProject.Models
         public string UserGender { get; set; }
         public string UserPhone { get; set; }
 
-        public int ArticlesId { get; set; }
         public ICollection<Articles>Articles { get; set; }
 
-        public int CommentsId { get; set; }
         public ICollection<Comments> Comments { get; set; }
     }
 

@@ -7,19 +7,9 @@
 
   <ItemGroup>
     <Compile Remove="Content\**" />
-    <Compile Remove="Migrations\**" />
     <Content Remove="Content\**" />
-    <Content Remove="Migrations\**" />
     <EmbeddedResource Remove="Content\**" />
-    <EmbeddedResource Remove="Migrations\**" />
     <None Remove="Content\**" />
-    <None Remove="Migrations\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Migrations\20190625094839_InitialCreate.cs" />
-    <Compile Include="Migrations\20190625094839_InitialCreate.Designer.cs" />
-    <Compile Include="Migrations\EfCoreContextModelSnapshot.cs" />
   </ItemGroup>
 
 

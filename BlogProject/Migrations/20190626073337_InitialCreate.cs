@@ -21,9 +21,7 @@ namespace BlogProject.Migrations
                     UserMail = table.Column<string>(nullable: true),
                     UserBirth = table.Column<DateTime>(nullable: false),
                     UserGender = table.Column<string>(nullable: true),
-                    UserPhone = table.Column<string>(nullable: true),
-                    ArticlesId = table.Column<int>(nullable: false),
-                    CommentsId = table.Column<int>(nullable: false)
+                    UserPhone = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

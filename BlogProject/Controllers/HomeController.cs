@@ -24,7 +24,7 @@ namespace BlogProject.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
 
         [HttpPost]

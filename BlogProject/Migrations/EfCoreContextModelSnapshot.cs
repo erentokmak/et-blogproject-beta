@@ -73,10 +73,6 @@ namespace BlogProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ArticlesId");
-
-                    b.Property<int>("CommentsId");
-
                     b.Property<string>("Name");
 
                     b.Property<string>("Surname");
