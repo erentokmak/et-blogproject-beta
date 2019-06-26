@@ -33,5 +33,11 @@ namespace BlogProject.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult MainPage()
+        {
+            return View();
+        }
+
     }
 }

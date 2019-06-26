@@ -12,6 +12,43 @@
     <None Remove="Content\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\css\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-bold-webfont.woff2" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-italic-webfont.woff2" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-regular-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-black-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-blackitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-bold-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-bolditalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extrabold-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extrabolditalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extralight-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extralightitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-light-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-lightitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-medium-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-mediumitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-regular-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-regularitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-semibold-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-semibolditalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-thin-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-thinitalic-webfont.woff2" />
+    <None Include="wwwroot\images\icons\icon-arrow-left-w.svg" />
+    <None Include="wwwroot\images\icons\icon-arrow-left.svg" />
+    <None Include="wwwroot\images\icons\icon-arrow-right-w.svg" />
+    <None Include="wwwroot\images\icons\icon-arrow-right.svg" />
+    <None Include="wwwroot\images\icons\icon-arrow-up.svg" />
+    <None Include="wwwroot\images\icons\icon-link.svg" />
+    <None Include="wwwroot\images\icons\icon-mail.svg" />
+    <None Include="wwwroot\images\icons\icon-quote.svg" />
+    <None Include="wwwroot\images\icons\icon-search.svg" />
+    <None Include="wwwroot\images\icons\icon-video.svg" />
+    <None Include="wwwroot\images\logo.svg" />
+    <None Include="wwwroot\images\mejs\mejs-controls.svg" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
