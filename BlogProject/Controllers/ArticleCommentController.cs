@@ -8,7 +8,7 @@ namespace BlogProject.Controllers
 {
     public class ArticleCommentController : Controller
     {
-        public IActionResult addArticle()
+        public IActionResult AddArticle()
         {
             return View();
         }

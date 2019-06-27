@@ -15,12 +15,6 @@ namespace BlogProject.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
         [HttpGet]
         public IActionResult Register()
         {
@@ -28,7 +22,7 @@ namespace BlogProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(Users user)
+        public IActionResult Register(User user)
         {
             return View();
         }
@@ -38,6 +32,7 @@ namespace BlogProject.Controllers
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult About()
         {
@@ -48,6 +43,12 @@ namespace BlogProject.Controllers
         public IActionResult Contact()
         {
             return View();
+        }
+
+        [HttpGet,ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

@@ -1,0 +1,98 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Register Page";
+}
+<html>
+<head>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/fontawesome.js"></script>
+    <link href="~/css/fontawesome.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="~/css/loginandregistertheme.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container" id="firstenter">
+            <div>
+                <h1 style="color:white">Blog Project</h1>
+                <br />
+                <form method="post" action="register" class="form">
+                    <div class="row">
+                        <div class="col-md">
+                            <p>
+                                <input asp-for="Name" type="text" placeholder="Ad">
+                            </p>
+                            <p>
+                                <input asp-for="UserName" type="text" placeholder="Kullanıcı Adı">
+                            </p>
+                            <p>
+                                <input asp-for="Mail" type="text" placeholder="E-Mail">
+                            </p>
+                            <p>
+                                @Html.DropDownListFor(x => x.Gender,
+                                new SelectList(Enum.GetValues(typeof(Gender))),
+                                "Cinsiyet",
+                                new { @class = " inputclass form-control dropdownmid " })
+                            </p>
+                        </div>
+                        <div class="col-md">
+                            <p>
+                                <input asp-for="Surname" type="text" placeholder="Soyad">
+                            </p>
+                            <p>
+                                <input asp-for="Password" type="password" placeholder="Sifre">
+                            </p>
+                            <p>
+                                <input asp-for="PhoneNumber" type="text" placeholder="Cep Telefonu">
+                            </p>
+                            <p>
+                                <div class="control-group">
+                                    <div class="controls input-append date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                        <input asp-for="Birth" size="16" type="text" value="Dogum Tarihi" readonly>
+                                        <span class="add-on"><i class="icon-remove"></i></span>
+                                        <span class="add-on"><i class="icon-th"></i></span>
+                                    </div>
+                                    <input type="hidden" id="dtp_input2" value="" /><br />
+                                </div>
+                            </p>
+                            <br />
+                        </div>
+                        <div style="height:1px"></div>
+                    </div>
+                    <button type="submit" id="login-button" style="left:40%">Kayıt Ol</button>
+                    <br />
+                    <br />
+                    <a href="~/Home/Index" id="loginbtn">Hesabın var mı ? </a>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <div id="a1"></div>
+            <div id="a2"></div>
+            <div id="a3"></div>
+        </div>
+
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/registerdatetime.js"></script>
+</body>
+</html>

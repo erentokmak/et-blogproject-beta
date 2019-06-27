@@ -8,7 +8,7 @@ namespace BlogProject.ViewModels.Home
 {
     public class ViewModels
     {
-        public List<Users> DbUsers { get; set; }
+        public List<User> DbUsers { get; set; }
         public List<Category> DbArticles { get; set; }
         public List<Comment> DbComments { get; set; }
     }

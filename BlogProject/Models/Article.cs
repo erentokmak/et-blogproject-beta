@@ -13,14 +13,14 @@ namespace BlogProject.Models
     {
         public int Id { get; set; }
 
-        public string ArticleTitle { get; set; }
-        public string ArticleSubject { get; set; }
-        public string ArticleContent { get; set; }
-        public DateTime ArticleAddTime { get; set; }
-        public int ArticleViews { get; set; }
+        public string Title { get; set; }
+        public string Subject { get; set; }
+        public string Content { get; set; }
+        public DateTime AddTime { get; set; }
+        public int View { get; set; }
 
         public int UserId { get; set; }
-        public virtual Users User { get; set; }
+        public virtual User User { get; set; }
 
         public int CommentId { get; set; }
         public ICollection<Comment> Comments { get; set; }
@@ -29,8 +29,7 @@ namespace BlogProject.Models
         public virtual Category Category { get; set; }
 
     }
-    public class ArticlesEntityConfiguration : IEntityTypeConfiguration<Article>
-    //Article tablosunda user foreign'i oluşturmaya çalışıyorum. // çalışıyor
+    public class ArticleEntityConfiguration : IEntityTypeConfiguration<Article>
     {
         public void Configure(EntityTypeBuilder<Article> builder)
         {
